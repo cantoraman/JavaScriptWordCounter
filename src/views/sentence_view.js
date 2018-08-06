@@ -4,16 +4,25 @@ const SentenceView = function (){
 
 };
 
-
 SentenceView.prototype.bindEvents = function () {
 
-  const inputSentence = document.querySelector('#text');
+  const inputSentence = document.querySelector('#wordcounter-form');
 
   inputSentence.addEventListener('submit', (event)=>{
-    const submittedText = event.target.value;
-    PubSub.publish('SentenceView:text-submitted', submittedText);
+    event.preventDefault();
+    let formText = document.querySelector('#text');
+    PubSub.publish('SentenceView:text-submitted', formText.value);
   });
+
+
+
+
+
+
+
+
+
 
 };
 
-module.export = SentenceView;
+module.exports = SentenceView;

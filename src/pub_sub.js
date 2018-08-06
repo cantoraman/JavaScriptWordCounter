@@ -5,7 +5,7 @@ const PubSub = {
     }); //CustomEvent is DOM thing
     document.dispatchEvent(event);
   },
-  subscibe: function(channel, callback) {
+  subscribe: function(channel, callback) {
     //// button.addEventListener('click', ()=>{ very much like this
     document.addEventListener(channel, callback);
   }

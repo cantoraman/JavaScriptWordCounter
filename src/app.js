@@ -4,7 +4,8 @@ const WordCounter = require('./models/wordcounter.js');
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const sentenceView = new SentenceView;
+
+  const sentenceView = new SentenceView();
   sentenceView.bindEvents();
 
   const wordcountView = new WordCountView;
